@@ -24,9 +24,14 @@ primitives.
 
 ```sh
 cd /srv/share/projects/snowy
-nix develop          # gtk4 + libadwaita + rust toolchain
-cargo run            # opens "Snowy — Preferences"
+just dev             # nix develop + cargo run — opens "Snowy — Preferences"
+
+# or, manually:
+nix develop          # drop into gtk4 + libadwaita + rust shell
+cargo run
 ```
+
+Other recipes: `just build`, `just watch`, `just check`, `just fmt`.
 
 ## Scope
 
