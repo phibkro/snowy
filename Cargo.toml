@@ -1,0 +1,29 @@
+[package]
+name = "snowy"
+version = "0.0.0"
+edition = "2024"
+description = "Stylix-backed home-manager settings panel — try ephemerally, apply persistently."
+license = "MIT"
+repository = "https://github.com/phibkro/snowy"
+
+[dependencies]
+# gtk4-rs and libadwaita-rs version-pair carefully — libadwaita wraps
+# matching gtk4 internals. Bumping one usually requires bumping the
+# other together.
+gtk4 = { version = "0.10", package = "gtk4", features = ["v4_18"] }
+libadwaita = { version = "0.8", features = ["v1_7"] }
+
+# Error handling.
+anyhow = "1"
+thiserror = "2"
+
+[profile.dev]
+# GTK debugging via `GTK_DEBUG=interactive` works either way; keep dev
+# fast and let release strip + opt.
+opt-level = 0
+debug = true
+
+[profile.release]
+strip = true
+lto = "thin"
+codegen-units = 1
