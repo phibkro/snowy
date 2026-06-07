@@ -11,8 +11,8 @@ empty `Adw.PreferencesWindow` pages. Functionality lands in M3–M6.
 
 Documented at:
 
-- Design: `<homelab>/docs/superpowers/specs/2026-06-07-hm-settings-panel-design.md`
-- Plan:   `<homelab>/docs/superpowers/plans/2026-06-07-snowy-implementation-plan.md`
+- Design: [`docs/DESIGN.md`](docs/DESIGN.md)
+- Plan:   [`docs/PLAN.md`](docs/PLAN.md)
 
 Short version: previous attempts at NixOS GUIs (nix-gui,
 nixos-conf-editor, SnowflakeOS) hit walls at full-OS scope. snowy

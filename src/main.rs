@@ -52,7 +52,7 @@ fn page(name: &str, title: &str, icon: &str) -> adw::PreferencesPage {
 
     let group = adw::PreferencesGroup::builder()
         .title(title)
-        .description("Not yet implemented — see docs/superpowers/plans/2026-06-07-snowy-implementation-plan.md")
+        .description("Not yet implemented — see docs/PLAN.md")
         .build();
 
     page.add(&group);
